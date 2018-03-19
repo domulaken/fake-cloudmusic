@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <el-container>
+    <el-container id="app-container">
       <el-header class="app-header">
         <user-info-zone></user-info-zone>
       </el-header>
-      <el-container class="app-main-container">
+      <el-container class="app-content">
         <router-view></router-view>
       </el-container>
-      <el-footer>Footer</el-footer>
+      <el-footer class="app-footer">Footer</el-footer>
     </el-container>
   </div>
 </template>
@@ -169,13 +169,28 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  .app-header{
-    border-bottom: 1px solid #eee;
-    height:70px !important;
-    width:100%;
+  #app-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    .app-header{
+      border-bottom: 1px solid #eee;
+      height:70px !important;
+      width:100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .app-content {
+      display:flex;
+      flex-grow: 1;
+      section.el-container {
+        flex-grow: 1;
+        height: 550px;
+      }
+    }
+    .app-footer {
+      height:60px;
+      background-color: #409EFF;
+    }
   }
 }
 body{

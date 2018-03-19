@@ -47,7 +47,6 @@
         </el-menu-item>
         <el-submenu index="10">
           <template slot="title">
-            <i class="el-icon-location"></i>
             <span>创建的歌单</span>
           </template>
           <el-menu-item-group>
@@ -58,7 +57,6 @@
         </el-submenu>
         <el-submenu index="11">
           <template slot="title">
-            <i class="el-icon-location"></i>
             <span>收藏的歌单</span>
           </template>
           <el-menu-item-group>
@@ -129,3 +127,35 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .tac{
+    h5, li, span, i{
+      font-size: 12px;
+    }
+    .el-menu-item {
+      height: 36px;
+      line-height: 36px;
+      text-align: left;
+    }
+    .el-submenu__title {
+      height: 36px;
+      line-height: 36px;
+      text-align: left;
+      span:nth-child(1) {
+        font-weight: bold;
+      }
+    }
+    .el-submenu {
+      .el-menu-item {
+        padding-left: 20px !important;
+      }
+    }
+    h5{
+      margin-top:10px;
+      margin-bottom: 10px;
+      padding:0 20px;
+      text-align: left;
+    }
+  }
+</style>

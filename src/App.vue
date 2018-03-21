@@ -20,7 +20,10 @@ export default {
     return {visible: false}
   },
   components: {UserInfoZone},
-  mounted () {},
+  mounted () {
+    // hack一下，强制改变app-content的width
+    this.findAppContainerFirstDiv()
+  },
   methods: {
     insertSort (arr) {
       for (let i = 1; i < arr.length; i++) {
@@ -157,6 +160,11 @@ export default {
       }
       [arr[pivot], arr[index - 1]] = [arr[index - 1], arr[pivot]]
       return index - 1
+    },
+    findAppContainerFirstDiv () {
+      let appContainer = document.getElementsByClassName('app-content')[0]
+      let div = appContainer.firstChild
+      div.style.width = '100%'
     }
   }
 }

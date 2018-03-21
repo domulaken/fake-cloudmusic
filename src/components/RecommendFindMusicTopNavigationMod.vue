@@ -63,10 +63,15 @@ export default {
 </script>
 <style lang="scss">
   .find-music-top-nav{
+    flex-grow: 1;
     .el-tabs__header{
       display:flex;
       justify-content: center;
       border-bottom: 2px solid #eee;
+    }
+    .el-tabs__content {
+      max-width: 1100px;
+      margin: auto;
     }
     .el-tabs__nav-wrap::after{
       background-color: transparent;

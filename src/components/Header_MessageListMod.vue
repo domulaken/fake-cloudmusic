@@ -16,7 +16,7 @@
   <no-messages v-else :messageType="this.messageType"></no-messages>
 </template>
 <script>
-import NoMessages from '../components/UserInfoZoneMessageListMod_NoMessages.vue'
+import NoMessages from './Header_MessageListMod_NoMessages.vue'
 export default {
   name: 'UserInfoZoneMessageListMod',
   props: ['messageType', 'number', 'content'],

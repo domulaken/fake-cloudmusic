@@ -7,7 +7,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import LeftNav from './components/LeftNav.vue'
+import LeftNav from './components/Aside_LeftNav.vue'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)

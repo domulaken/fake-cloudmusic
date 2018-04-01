@@ -15,15 +15,14 @@
   </div>
 </template>
 <script>
-import UserInfoZone from '../components/UserInfoZone.vue'
-import LeftNav from '../components/LeftNav.vue'
-import TopNav from './RecommendFindMusicTopNavigationMod.vue'
+import UserInfoZone from './Header.vue'
+import LeftNav from './Aside_LeftNav.vue'
+import TopNav from './Recommend_FindMusic_A_TopNavigationMod.vue'
 export default {
   name: 'MainPage',
   components: {UserInfoZone, LeftNav, TopNav},
   mounted () {
     let currentRoute = '/mainPage/findMusic/recommend'
-//    this.$router.push(currentRoute)
     console.log('mainpage', this.$router.history.current.name)
   }
 }

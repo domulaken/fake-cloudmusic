@@ -210,7 +210,7 @@
 </template>
 
 <script>
-import UserInfoZoneMessageListMod from '../components/UserInfoZoneMessageListMod.vue'
+import UserInfoZoneMessageListMod from './Header_MessageListMod.vue'
 export default {
   name: 'UserInfoZone',
   components: {UserInfoZoneMessageListMod},

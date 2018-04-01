@@ -17,8 +17,8 @@
   </div>
 </template>
 <script>
-import Recommend from './RecommendFindMusicRecommendMod.vue'
-import SongList from './RecommendFindMusicSongList.vue'
+import Recommend from './Recommend_FindMusic_Recommend.vue'
+import SongList from './Recommend_FindMusic_SongList.vue'
 export default {
   components: {Recommend, SongList},
   data () {
@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     handleClick (value) {
+      let baseUrl = '/mainPage/findMusic/'
       switch (value) {
         case 'recommend' :
           this.$router.push({path: '/mainPage/findMusic/recommend'})
@@ -42,7 +43,7 @@ export default {
           this.$router.push('/mainPage/findMusic/songList')
           break
         case 'streamerRadio' :
-          this.$router.push('streamerRadio')
+          this.$router.push(baseUrl + 'streamerRadio')
           break
         case 'billBoard' :
           this.$router.push('billBoard')

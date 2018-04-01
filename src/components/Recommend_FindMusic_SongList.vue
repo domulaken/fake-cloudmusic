@@ -15,19 +15,16 @@
       </template>
     </ul>
     <list-item-mod></list-item-mod>
-    <el-popover
-      refs="popover1"
-      placement="top-start"
-      title="标题"
-      width="200"
-      trigger="hover"
-      content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-    </el-popover>
+    <el-pagination
+      layout="prev,pager,next"
+      :total="totalPage"
+      background
+    ></el-pagination>
   </div>
 </template>
 
 <script>
-import ListItemMod from '../components/RecommendFindMusicSongList_ListItemMod.vue'
+import ListItemMod from './Recommend_FindMusic_SongList_ListItemMod.vue'
 export default {
   name: 'SongList',
   components: {ListItemMod},
@@ -44,7 +41,8 @@ export default {
         'ACG',
         '怀旧',
         '治愈'
-      ]
+      ],
+      totalPage: 1000
     }
   }
 }
@@ -82,6 +80,9 @@ export default {
       .hot-label-item:nth-last-child(1) a{
         border-right: 0;
       }
+    }
+    .el-pagination {
+      align-self: center;
     }
   }
 </style>

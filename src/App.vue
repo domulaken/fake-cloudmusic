@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import UserInfoZone from './components/UserInfoZone.vue'
+import UserInfoZone from './components/Header.vue'
 export default {
   name: 'App',
   data: function () {
@@ -164,7 +164,9 @@ export default {
     findAppContainerFirstDiv () {
       let appContainer = document.getElementsByClassName('app-content')[0]
       let div = appContainer.firstChild
-      div.style.width = '100%'
+      if (div !== undefined) {
+        div.style.width = '100%'
+      }
     }
   }
 }
@@ -172,6 +174,9 @@ export default {
 
 <style lang="scss">
 #app {
+  ul,li{
+    list-style: none;
+  }
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

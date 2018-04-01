@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Carousel from './Carousel.vue'
-import RecommendSongList from './RecommendSongList.vue'
-import RecommendBoardcasting from './RecommendBoardcasting.vue'
-import RecommendNewSongs from './RecommendNewSongs.vue'
+import Carousel from './Recommend_FindMusic_Recommend_Carousel.vue'
+import RecommendSongList from './Recommend_FindMusic_Recommend_SongList.vue'
+import RecommendBoardcasting from './Recommend_Boardcasting.vue'
+import RecommendNewSongs from './Recommend_FindMusic_Recommend_NewSongs.vue'
 export default {
   components: {Carousel, RecommendSongList, RecommendBoardcasting, RecommendNewSongs},
   data () {

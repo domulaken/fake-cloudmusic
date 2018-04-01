@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-import LeftNav from '@/components/LeftNav'
-import TopNav from '../components/RecommendFindMusicTopNavigationMod.vue'
-import Recommend from '../components/RecommendFindMusicRecommendMod.vue'
-import SongList from '../components/RecommendFindMusicSongList.vue'
+
+// Header :包含在main-page中
+import MainPage from '../components/MainPage.vue'
+
+import Recommend from '../components/Recommend_FindMusic_Recommend.vue'
+import SongList from '../components/Recommend_FindMusic_SongList.vue'
 import Setting from '../components/SettingMod.vue'
 import Container from '../components/Container.vue'
-import MainPage from '../components/MainPage.vue'
-import UserInfoZone from '../components/UserInfoZone.vue'
-import PersonalFM from '../components/RecommendPersonalFM.vue'
-import FindMusic from '../components/RecommendFindMusic.vue'
+
+import PersonalFM from '../components/Recommend_PersonalFM.vue'
+import FindMusic from '../components/Recommend_FindMusic.vue'
+import StreamerRadio from '../components/Recommend_FindMusic_StreamerRadio.vue'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
               path: 'songList',
               name: 'songList',
               component: SongList
+            },
+            {
+              path: 'StreamerRadio',
+              name: 'StreamerRadio',
+              component: StreamerRadio
             }
           ]
         },
